@@ -1,0 +1,256 @@
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+}
+
+.app-header .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.app-header .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 1rem;
+}
+
+.app-header .nav-link:hover {
+  color: white;
+}
+
+.app-header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.app-header .user-name {
+  margin-right: 1rem;
+  color: white;
+}
+
+.hockey-theme {
+  background-color: #f8f9fa;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                    url('/public/hockey-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 56px);
+}
+
+.match-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.match-card .match-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.match-card .match-status {
+  font-weight: bold;
+}
+
+.match-card .status-upcoming {
+  color: var(--primary-color);
+}
+
+.match-card .status-live {
+  color: var(--danger-color);
+  animation: blink 1s infinite;
+}
+
+.match-card .status-finished {
+  color: var(--success-color);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.team-flag {
+  width: 60px;
+  height: 40px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+.prediction-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.prediction-input {
+  width: 60px;
+  text-align: center;
+}
+
+.login-form, .register-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.loader {
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.predictions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.predictions-table th, 
+.predictions-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+.predictions-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.predictions-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.points {
+  font-weight: bold;
+  color: var(--success-color);
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.profile-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .prediction-form {
+    flex-direction: column;
+  }
+  
+  .prediction-input {
+    margin-bottom: 0.5rem;
+  }
+}
